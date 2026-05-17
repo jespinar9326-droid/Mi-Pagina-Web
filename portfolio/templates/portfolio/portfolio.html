@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Portafolio - Jeremy Espinar{% endblock %}
+
+{% block content %}
+<header class="hero hero-portfolio">
+    <div class="hero-content">
+        <h1>Mi Portafolio</h1>
+        <p>Explora mis proyectos y creaciones más recientes</p>
+    </div>
+</header>
+
+<section class="seccion-lectura">
+    <div class="container-texto">
+        {% for project in projects %}
+            <h2>{{ project.title }}</h2>
+            <div style="margin: 20px 0;">
+                <img src="{{ project.image.url }}" alt="{{ project.title }}" style="max-width: 40%; border-radius: 8px;">
+            <div class="proyecto-texto-box">
+            <p>{{ project.description }}</p>
+            {% if project.link %}
+                <p><a href="{{ project.link }}" target="_blank" style="color: #007bff; font-weight: bold;">Mas Informacion</a></p>
+            {% endif %}
+        </div>
+    </div>
+
+    <hr style="margin: 40px auto; border: 0; border-top: 1px solid #eee; width: 50%;">
+{% endfor %}
+    </div>
+</section>
+{% endblock %}
