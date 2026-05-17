@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Mi Web{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+     <div class="logo">
+    <a href="{% url 'home' %}" style="color: inherit !important; text-decoration: none !important; background: transparent !important; border: none !important; padding: 0 !important; margin: 0 !important; outline: none !important; box-shadow: none !important; -webkit-tap-highlight-color: transparent !important; cursor: pointer;">
+        Jeremy Espinar
+    </a>
+</div>
+        <div class="links">
+            <a href="{% url 'home' %}">Inicio</a>
+            <a href="{% url 'about' %}">Sobre Mí</a>
+            <a href="{% url 'portfolio' %}">Portafolio</a>
+            <a href="{% url 'contacto' %}">Contacto</a>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+ <div class="seccion-logos-footer">
+    <a href="https://mail.google.com/" class="icon-link">
+        <img src="../static/img/correo.png" id="logo-gmail" class="logo-interactivo" alt="Gmail">
+    </a>
+    <a href="https://www.youtube.com/" target="_blank" class="icon-link">
+        <img src="../static/img/yt.png" id="logo-yt" class="logo-interactivo" alt="YouTube">
+    </a>
+    <a href="https://github.com/jespinar9326-droid" target="_blank">
+    <img src="{% static 'img/github.png' %}" id="logo-github" class="logo-interactivo" alt="GitHub" style="width: 32px !important; height: 32px !important;">
+</a>
+</div>
+    <hr width="100%">
+<footer class="main-footer"style="text-align: center; padding: 20px 0 40px 0;">
+    <p>Copyright© 2026 - Jeremy Emmanuel Espinar Utreras</p>
+</footer>
+
+
+
+
+
+</body>
+</html>
