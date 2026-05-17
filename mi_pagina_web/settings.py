@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-9tkne26rg%k75g2i@(3z(+g^+4&ahz!3$#a*cv#v5_j6z$z!9q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['jeremyespinar.pythonanywhere.com', 'JeremyEspinar.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'mi_pagina_web.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/home/jeremyespinar/Mi-Pagina-Web/db.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
